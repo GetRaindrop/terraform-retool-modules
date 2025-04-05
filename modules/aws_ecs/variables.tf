@@ -129,6 +129,11 @@ variable "rds_performance_insights_retention_period" {
   description = "The time in days to retain Performance Insights for RDS. Defaults to 14."
 }
 
+variable "postgres_host" {
+  type        = string
+  description = "Hostname for the Postgres instance."
+}
+
 variable "use_exising_temporal_cluster" {
   type        = bool
   default     = false
