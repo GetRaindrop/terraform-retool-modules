@@ -37,7 +37,7 @@ resource "aws_db_instance" "this" {
   password                     = aws_secretsmanager_secret_version.rds_password.secret_string
   port                         = 5432
   publicly_accessible          = var.rds_publicly_accessible
-  vpc_security_group_ids       = [aws_security_group.rds.id]
+  vpc_security_group_ids       = ["sg-01e6e5a966ff8f75f"]
   db_subnet_group_name         = aws_db_subnet_group.this.name
   performance_insights_enabled = var.rds_performance_insights_enabled
   max_allocated_storage        = "645"
